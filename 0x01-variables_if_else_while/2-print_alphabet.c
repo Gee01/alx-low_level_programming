@@ -12,7 +12,9 @@ int main(v0id)
 	{
 		putchar(lc);
 	}
+
 	putchar('\n');
+
 	return (0);
 }
 
