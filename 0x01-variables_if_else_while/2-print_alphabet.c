@@ -14,4 +14,5 @@ int main(v0id)
 	}
 	putchar('\n');
 	return (0);
+}
 
