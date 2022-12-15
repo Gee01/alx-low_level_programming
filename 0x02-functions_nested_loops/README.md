@@ -1,1 +1,1 @@
-0x02-functions_nested_loops
+7-print_last_digit.c
