@@ -1,1 +1,1 @@
-this directory contains more tasks on more functions of nested loops
+0-isupper.c
