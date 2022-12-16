@@ -6,7 +6,6 @@
 
 void print_numbers(void)
 {
-
 	char item;
 
 	for (item = '0'; item <= '9'; item++)
