@@ -1,18 +1,20 @@
-ginclude "main.h"
+#include "main.h"
 
 /**
- * print_most_numbers - prints numbers between 0 to 9
- * (neither 2 bor 4).
- * Return: no return.
+ * print_most_numbers	-	Entry
  */
+
 void print_most_numbers(void)
 {
-	int ch;
 
-	for (ch = 48; ch < 58; ch++)
-	{
-		if (ch != 50 && ch != 52)
-			_putchar(ch);
-	}
-	_putchar('\n');
+	int item;
+
+	for (item = 0; item <= 9; item++)
+		{
+		if (item == 2 || item == 4)
+			continue;
+		else
+		printf("%i", item);
+		}
+		printf("\n");
 }
