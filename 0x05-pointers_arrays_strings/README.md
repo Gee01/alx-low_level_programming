@@ -1,1 +1,1 @@
-pointers arrays strings
+6-puts2.c
