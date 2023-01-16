@@ -4,7 +4,7 @@
  * main - prints name of any file that runs this code
  *
  * Return: 0
- * */
+ */
 int main(void)
 {
 	printf("%s\n", __BASE_FILE__);
