@@ -1,4 +1,6 @@
-#include "variadic_functions.h"
+#include <stdio.h>
+#include <stdarg.h>
+#include <stdlib.h>
 
 /**
  * print_strings - Prints a number followed by a separator
@@ -10,32 +12,24 @@
 void print_strings(const char *separator, const unsigned int n, ...)
 {
 	va_list ap;
+	char *s;
 	unsigned int i;
 
-	int *arr = malloc(sizeof(int) * n);
+	if (separator == NULL)
+		separator = "";
 
 	va_start(ap, n);
 	for (i = 0; i < n; i++)
 	{
-		if (va_arg(ap, char *) == NULL)
-			arr[i] = 1;
-		else
-			arr[i] = 0;
-	}
-	va_end(ap);
-
-	va_start(ap, n);
-	for (i = 0; i < n; i++)
-	{
-		if (arr[i] == 1)
-			printf("(nil)");
-		else
-			printf("%s", va_arg(ap, char *));
-		if (i < (n - 1) && separator)
+		s = va_arg(ap, char *);
+		if (s == NULL)
+			s = "(nil)";
+		printf("%s", s);
+		if (i < n - 1)
 		{
 			printf("%s", separator);
 		}
 	}
+	printf("\n");
 	va_end(ap);
-	putchar('\n');
 }
